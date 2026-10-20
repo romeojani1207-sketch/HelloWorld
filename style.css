@@ -1,0 +1,71 @@
+* { box-sizing: border-box; }
+body { margin: 0; color: #292720; background: #fffefa; font: 16px/1.6 Arial, sans-serif; }
+h1, h2, h3 { font-family: Georgia, serif; line-height: 1.2; }
+a { color: inherit; }
+
+.site-header, .site-footer {
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.wordmark { font: bold 24px Georgia, serif; text-decoration: none; }
+.wordmark span, .eyebrow, .timeline-date { color: #963d32; }
+.site-header nav { display: flex; flex-wrap: wrap; gap: 12px 20px; }
+.site-header nav a, .site-footer a { font-size: 14px; text-decoration: none; }
+
+.intro-section { padding: 60px 12%; background: #f1ece2; }
+.intro-copy { max-width: 720px; }
+wh1 { font-size: clamp(40px, 7vw, 72px); line-height: 1.05; }
+h1 span { color: #963d32; }
+.intro-lead { max-width: 620px; }
+.city-facts, .stadium-gallery { display: flex; flex-wrap: wrap; gap: 24px; }
+.city-facts { margin-top: 30px; }
+.city-facts div { display: flex; flex-direction: column; }
+.city-facts span { font-size: 13px; }
+
+.sights-section, .culture-section { padding: 50px 10%; }
+.section-heading { max-width: 650px; }
+.sights-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 36px; }
+.sight-card { padding: 8px 0; }
+.sight-card h3, .culture-feature h3, .history-timeline h3 { margin-bottom: 4px; }
+.sight-card p, .culture-feature p, .history-timeline p { margin-top: 4px; }
+
+.history-section {
+    padding: 50px 12%;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    background: #f1ece2;
+}
+.history-timeline li { padding-bottom: 16px; }
+.culture-columns { display: flex; gap: 28px; }
+.culture-feature { flex: 1; }
+
+.sport-section {
+    padding: 50px 12%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: #edf0ec;
+}
+.sport-copy, .stadium-gallery { flex: 1; }
+.club-rivalry { display: flex; justify-content: space-between; max-width: 360px; font-weight: bold; }
+.stadium-image { flex: 1; margin: 0; }
+.stadium-image-offset { margin-top: 35px; }
+.stadium-image img { width: 100%; height: auto; }
+.stadium-image figcaption { font-size: 13px; }
+
+.site-footer { background: #292720; color: white; }
+.site-footer p { margin: 0; }
+
+@media (max-width: 700px) {
+    .site-header, .sport-section { align-items: flex-start; flex-direction: column; }
+    .intro-section, .history-section, .sport-section { padding: 40px 7%; }
+    .sights-section, .culture-section { padding: 40px 7%; }
+    .history-section, .sights-grid, .culture-columns { grid-template-columns: 1fr; }
+    .culture-columns, .stadium-gallery { flex-direction: column; }
+    .stadium-image-offset { margin-top: 0; }
+    .site-footer { flex-wrap: wrap; }
+}
